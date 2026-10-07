@@ -81,7 +81,8 @@ Please see below some other examples of profitable Strangles the strategy has pr
 
 It is observable that not all positions cleanly converge to the model’s forecast. In this particular period in time, volatility is low and has been sticking particularly hard to this low level. The graph below shows a clustering of the VIX. We are currently in the lowest cluster (green), even though there has been particular turmoil in geopolitics and global markets.
 
-![K-means clustering of VIX history into four volatility regimes, with the current level in the lowest cluster](media/image1.png)
+![K-means clustering of VIX history into four volatility regimes, with the current level in the lowest cluster]<img width="1592" height="412" alt="image1" src="https://github.com/user-attachments/assets/2d170bb7-46d8-40d9-ac07-171b178eb559" />
+
 
 In the small sample I currently possess of the strategy, out of the 9 trades I made, 8 have had positive returns. The trade that lost money was due to poor risk management and position control, most likely due to my inexperience in trading short-dated options. This trade can be seen below:
 
@@ -183,12 +184,9 @@ Step 6: Estimate the parameters of all the GARCH-family models using p = 1, …,
 
 (Stock returns tend to deviate from Gaussian assumptions. That’s the main reason for the volatility smile. Far tail events tend to be more likely than what the normal distribution states, hence OTM strikes are more richly priced, leading to higher implied volatilities. See below a couple of examples of prominent stocks:
 
-![AMZN daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis](media/image2.png)
-
-![NKE daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis](media/image3.png)
-
-![TSLA daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis](media/image4.png)
-
+![AMZN daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis]<img width="1000" height="600" alt="image2" src="https://github.com/user-attachments/assets/067393c5-f225-419e-8e2b-c16855e1e25e" />
+![NKE daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis]<img width="1000" height="600" alt="image3" src="https://github.com/user-attachments/assets/87638e53-7d61-493a-8cd7-c1cf3615c2ea" />
+![TSLA daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis]<img width="1000" height="600" alt="image4" src="https://github.com/user-attachments/assets/c0882a61-f3bb-4689-9832-7ea3e2b9fe2d" />
 Some stocks exhibit left skew, others exhibit right skew, but most exhibit excess kurtosis, hence utilizing a distribution such as the Skewed Student’s t, with degrees of freedom and skewness being freely estimated by MLE, allows for a better fit to the time series.)
 
 Step 7: Rank the winning models from each family by BIC. Take the best p,q from each model to the next step.
