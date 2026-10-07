@@ -1,6 +1,5 @@
 [README.md](https://github.com/user-attachments/files/33180651/README.md)
-# Volatility-Mispricing-Directional-Breakout
-A simple options trading strategy based on finding underpriced options through volatility mispricings combined with a directional breakout.
+
 # Volatility Mispricing Discovery and Directional Breakout
 
 Afonso Bernardo dos Santos
