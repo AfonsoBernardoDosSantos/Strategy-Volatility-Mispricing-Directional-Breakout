@@ -1,5 +1,6 @@
 
 # Code was produced with assistance of Claude
+# Model inputs should match throughout all 3 sections. It's handy to search for mean and change mean to AR, Zero or Constant and add or remove "lags" based on what was observed on the LB and past returns section.
 
 import warnings
 import statsmodels.api as sm
@@ -22,7 +23,7 @@ from arch.unitroot import VarianceRatio
 
 ticker = "MRNA"
 
-df = yf.download(ticker, start="2021-09-04", end="2026-10-04", auto_adjust=False)
+df = yf.download(ticker, start="2021-09-04", end="2026-10-08", auto_adjust=False)
 
 df_filter = df[["Adj Close"]].copy()
 df_filter.rename(columns={"Adj Close": "price_t"}, inplace=True)
