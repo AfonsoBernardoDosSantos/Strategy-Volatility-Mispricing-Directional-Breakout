@@ -100,9 +100,8 @@ If a stop loss had been placed, the maximum drawdown could have been stopped at 
 $$\sigma_{t}^{2} = \omega + \alpha_{1}\varepsilon_{t - 1}^{2} + \beta_{1}\sigma_{t - 1}^{2}$$
 
 Which then turns into:
-
-*  
-*$$\sigma_{t} = \sqrt{\omega + \alpha_{1}\varepsilon_{t - 1}^{2} + \beta_{1}\sigma_{t - 1}^{2}}$$
+ 
+$$\sigma_{t} = \sqrt{\omega + \alpha_{1}\varepsilon_{t - 1}^{2} + \beta_{1}\sigma_{t - 1}^{2}}$$
 
 With random shocks being calculated in several ways:
 
