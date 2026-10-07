@@ -80,7 +80,7 @@ Please see below some other examples of profitable Strangles the strategy has pr
 
 It is observable that not all positions cleanly converge to the model’s forecast. In this particular period in time, volatility is low and has been sticking particularly hard to this low level. The graph below shows a clustering of the VIX. We are currently in the lowest cluster (green), even though there has been particular turmoil in geopolitics and global markets.
 
-![K-means clustering of VIX history into four volatility regimes, with the current level in the lowest cluster]<img width="945" height="316" alt="image" src="https://github.com/user-attachments/assets/18a6bbc7-fc74-4d74-bfa4-a983546baf1c" />
+![K-means clustering of VIX history into four volatility regimes, with the current level in the lowest cluster](VIXCluster.png)
 
 
 In the small sample I currently possess of the strategy, out of the 9 trades I made, 8 have had positive returns. The trade that lost money was due to poor risk management and position control, most likely due to my inexperience in trading short-dated options. This trade can be seen below:
@@ -182,11 +182,11 @@ Step 6: Estimate the parameters of all the GARCH-family models using p = 1, …,
 
 (Stock returns tend to deviate from Gaussian assumptions. That’s the main reason for the volatility smile. Far tail events tend to be more likely than what the normal distribution states, hence OTM strikes are more richly priced, leading to higher implied volatilities. See below a couple of examples of prominent stocks:
 
-![AMZN daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis]<img width="1000" height="600" alt="image2" src="https://github.com/user-attachments/assets/74b65f29-f27c-4ecd-ba0b-0421f6ff1e6e" />
+![AMZN daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis](AMZN.png)
 
-![NKE daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis]<img width="1000" height="600" alt="image3" src="https://github.com/user-attachments/assets/3a6dd6ee-8f2d-47eb-8160-41d16b75a6f4" />
+![NKE daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis](nke.png)
 
-![TSLA daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis]<img width="1000" height="600" alt="image4" src="https://github.com/user-attachments/assets/28ced94d-6343-4491-9692-19fb6a80a07a" />
+![TSLA daily return distribution against a fitted normal curve, annotated with skewness and excess kurtosis](tsla.png)
 
 Some stocks exhibit left skew, others exhibit right skew, but most exhibit excess kurtosis, hence utilizing a distribution such as the Skewed Student’s t, with degrees of freedom and skewness being freely estimated by MLE, allows for a better fit to the time series.)
 
