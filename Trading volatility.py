@@ -20,6 +20,7 @@ from statsmodels.stats.diagnostic import acorr_ljungbox
 from statsmodels.tsa.stattools import acf
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from arch.unitroot import VarianceRatio
+from scipy.stats import norm
 
 ticker = "MRNA"
 
