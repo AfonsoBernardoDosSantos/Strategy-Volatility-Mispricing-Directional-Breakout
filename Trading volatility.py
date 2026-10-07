@@ -398,7 +398,7 @@ for _, row in iv_df.iterrows():
 
     significant = proportion_below <= 0.05 or proportion_below >= 0.95
 
-    # --- Greeks, using the correct flag for calls vs puts ---
+    # Greeks
     option_delta = delta(flag=flag, S=spot_price, K=strike, t=T_years, r=risk_free_rate, sigma=observed_iv)
     option_gamma = gamma(flag=flag, S=spot_price, K=strike, t=T_years, r=risk_free_rate, sigma=observed_iv)
     option_theta = theta(flag=flag, S=spot_price, K=strike, t=T_years, r=risk_free_rate, sigma=observed_iv)
@@ -559,7 +559,7 @@ def run_variance_ratio_analysis(ticker_name, price_series, lookback_days=252, ma
     return pd.DataFrame(vr_records), k_horizons, start_date, end_date, n_obs
 
 
-# --- Run test on trailing 1-year (252 trading days) ---
+# Run test on trailing 1-year (252 trading days)
 lookback_window = 252
 
 vr_results, k_horizons, start_dt, end_dt, obs_count = run_variance_ratio_analysis(
