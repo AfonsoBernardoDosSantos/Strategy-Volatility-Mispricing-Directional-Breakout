@@ -249,7 +249,7 @@ print(f"1Y Treasury yield: {risk_free_rate:.4%}")
 ticker_symbol = ticker
 stock = yf.Ticker(ticker_symbol)
 spot_price = stock.history(period="1d")["Close"].iloc[-1]
-print(f"spot price: {spot_price:.2f}")
+print(f"{ticker} spot price: {spot_price:.2f}")
 
 # Valid expiries (< 2 months)
 
@@ -291,7 +291,7 @@ for expiry in valid_expiries:
 
         for _, row in selected.iterrows():
             strike = row["strike"]
-            bid, ask = row["bid"], row["ask"]
+            bid, ask = (row["bid"], row["ask"]) if row["bid"] > 0 else (row["lastPrice"], row["lastPrice"])
 
             if bid <= 0 or ask <= 0:
                 continue
