@@ -249,7 +249,7 @@ print(f"1Y Treasury yield: {risk_free_rate:.4%}")
 ticker_symbol = ticker
 stock = yf.Ticker(ticker_symbol)
 spot_price = stock.history(period="1d")["Close"].iloc[-1]
-print(f"CVX spot price: {spot_price:.2f}")
+print(f"spot price: {spot_price:.2f}")
 
 # Valid expiries (< 2 months)
 
